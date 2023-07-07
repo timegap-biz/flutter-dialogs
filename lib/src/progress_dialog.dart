@@ -1,6 +1,4 @@
 import 'package:ars_dialog/ars_dialog.dart';
-import 'package:ars_dialog/src/transition.dart';
-import 'package:ars_dialog/src/utils.dart';
 import 'package:flutter/material.dart';
 
 ///Typedef of Progress while on Progress Error
@@ -332,7 +330,7 @@ class _ProgressDialogWidgetState extends State<_ProgressDialogWidget>
                   child: Semantics(child: message),
                   style: widget.dialogStyle.contentTextStyle ??
                       dialogTheme.contentTextStyle ??
-                      theme.textTheme.subtitle1!,
+                      theme.textTheme.titleMedium!,
                 ),
               ),
             ],
@@ -360,7 +358,8 @@ class _ProgressDialogWidgetState extends State<_ProgressDialogWidget>
                   },
                   child: DefaultTextStyle(
                     child: widget.cancelText ?? Text("Cancel"),
-                    style: TextStyle(color: Theme.of(context).accentColor),
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onTertiary),
                   ),
                 ),
               )

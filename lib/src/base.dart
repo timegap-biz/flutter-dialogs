@@ -58,7 +58,7 @@ class ArsDialog extends StatelessWidget {
                     ),
                     style: style.titleTextStyle ??
                         dialogTheme.titleTextStyle ??
-                        theme.textTheme.headline6!,
+                        theme.textTheme.titleLarge!,
                   ),
                 )
               : Container(),
@@ -72,7 +72,7 @@ class ArsDialog extends StatelessWidget {
                       child: Semantics(child: content),
                       style: style.contentTextStyle ??
                           dialogTheme.contentTextStyle ??
-                          theme.textTheme.subtitle1!,
+                          theme.textTheme.titleMedium!,
                     ),
                   ),
                 )
